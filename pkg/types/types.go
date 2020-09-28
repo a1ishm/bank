@@ -12,6 +12,20 @@ type PAN string
 // Category t
 type Category string
 
+// Status t
+type Status string
+
+const (
+	// StatusOk v
+	StatusOk Status = "OK"
+
+	// StatusFail v
+	StatusFail Status = "FAIL"
+
+	// StatusInProgress v
+	StatusInProgress Status = "INPROGRESS"
+)
+
 const (
 	// TJS v
 	TJS Currency = "TJS"
@@ -40,6 +54,7 @@ type Payment struct {
 	ID       int
 	Amount   Money
 	Category Category
+	Status   Status
 }
 
 // PaymentSource t
